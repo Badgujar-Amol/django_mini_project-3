@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Marksheet</title>
+    <style>
+        .head {
+            background-color: rgb(243, 164, 213);
+            text-align: center;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <h1>Marksheet</h1>
+        <hr>
+        <div class="col-12">
+            <form method="post">
+                {% csrf_token %}
+                <label>Math : </label>
+                <input type="text" value="{{s1}}" name="subject1">
+                <br>
+                <br>
+                <label>English : </label>
+                <input type="text" value="{{s2}}" name="subject2">
+                <br>
+                <br>
+                <label>Science : </label>
+                <input type="text" value="{{s3}}" name="subject3">
+                <br>
+                <br>
+                <label>History : </label>
+                <input type="text" value="{{s4}}" name="subject4">
+                <br>
+                <br>
+                <label>Geography : </label>
+                <input type="text" value="{{s5}}" name="subject5">
+                <br>
+                <br>
+                <button type="submit">Calculate Percentage</button>
+                <br>
+                <br>
+                <label>Total : </label>
+                <input type="text" value="{{total}}">
+                <br>
+                <br>
+                <label>Percentage : </label>
+                <input type="text" value="{{percentage}} %">
+                <br>
+                <br>
+                <label>Grade : </label>
+                <input type="text" value="{{grade}}">
+            </form>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
